@@ -7,12 +7,12 @@ from django.utils.translation import gettext as _
 
 class Post(models.Model):
     post_title = models.CharField(max_length=200)
-    post_text = models.TextField(_(""))
+    post_text = models.TextField((""))
     post_author = get_user_model()
     created_date = models.DateTimeField(
-        _(""), auto_now=False, auto_now_add=False)
+        (""), auto_now=False, auto_now_add=False)
     published_date = models.DateTimeField(
-        _(""), auto_now=False, auto_now_add=False)
+        (""), auto_now=False, auto_now_add=False)
 
     def __str__(self) -> str:
         return self.post_title
